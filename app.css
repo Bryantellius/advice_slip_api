@@ -1,0 +1,13 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div {
+  width: 50vw;
+  height: fit-content;
+  margin: 5rem 0;
+  text-align: center;
+}
