@@ -30,6 +30,7 @@ function fetchAdvice() {
           // Create a li for each advice object
           const li = document.createElement("li");
           li.id = id;
+          li.classList.add("advice");
           li.textContent = advice;
           for (let child of saved.children) {
             if (child.textContent.includes(advice)) {
@@ -51,6 +52,7 @@ function fetchAdvice() {
 
             if (!exists) {
               const advice = document.createElement("p");
+              advice.classList.add("advice");
               advice.id = "advice" + id;
               advice.textContent = event.target.textContent;
               advice.addEventListener("dblclick", (event) => {
@@ -80,6 +82,7 @@ function fetchAdvice() {
 
       if (!exists) {
         const prevSearch = document.createElement("p");
+        prevSearch.classList.add("advice");
         prevSearch.textContent = query.value;
         prevSearch.style.color = response.slips ? "black" : "red";
         prevSearch.addEventListener("click", (event) => {
